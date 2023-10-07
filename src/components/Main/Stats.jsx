@@ -1,5 +1,6 @@
 import { Statistic } from "antd";
 import { stats } from "../../constants";
+import { PropTypes } from "prop-types";
 
 const Stat = ({ stat }) => (
   <div className=" flex gap-4">
@@ -47,5 +48,9 @@ const Stats = () => {
     </section>
   );
 };
+
+Stat.propTypes = {
+  stat: PropTypes.object
+}
 
 export default Stats;
