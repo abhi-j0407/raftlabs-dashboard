@@ -6,7 +6,7 @@ const Hero = () => {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
-    <section className=" p-6 border border-blue-600">
+    <section className=" p-6">
       <div className=" flex items-center justify-between md:items-start">
         {/* Avatar & Greeting */}
         <div className=" flex gap-8 md:flex-col">

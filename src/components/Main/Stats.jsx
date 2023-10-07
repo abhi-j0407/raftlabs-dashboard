@@ -1,7 +1,51 @@
+import { Statistic } from "antd";
+import { stats } from "../../constants";
+
+const Stat = ({ stat }) => (
+  <div className=" flex gap-4">
+    <img
+      src={stat.icon}
+      alt="icon"
+      className=" w-16 self-center rounded-full p-4"
+      style={{ background: "linear-gradient(0deg, #A6C354 40%, #B9EEFF 40%)" }}
+    />
+    <div>
+      <Statistic
+        title={
+          <p className=" text-base font-medium tracking-wide text-violet-100">
+            {stat.title}
+          </p>
+        }
+        value={stat.value}
+        groupSeparator="."
+        prefix="$"
+        suffix={
+          <p className=" rounded-full bg-white py-1 pl-1.5 pr-2 text-xs font-medium text-violet-400">
+            {stat.change}
+          </p>
+        }
+        valueStyle={{
+          display: "flex",
+          alignItems: "center",
+          color: "white",
+        }}
+      />
+      <div className=" flex gap-1">
+        <p className=" text-violet-100">{stat.subtitle}</p>
+        <p className=" font-bold text-white">${stat.subValue}</p>
+      </div>
+    </div>
+  </div>
+);
+
 const Stats = () => {
   return (
-    <div>Stats</div>
-  )
-}
+    <section className=" m-6 flex flex-wrap justify-around rounded-2xl bg-violet-400 p-6 px-[2%] md:gap-x-2 md:gap-y-4 sm:gap-4">
+      {stats.map((stat) => (
+        <Stat stat={stat} key={stat.title} />
+      ))}
+    </section>
+  );
+};
 
-export default Stats
+export default Stats;
