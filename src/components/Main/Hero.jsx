@@ -7,9 +7,9 @@ const Hero = () => {
 
   return (
     <section className=" p-6 border border-blue-600">
-      <div className=" flex items-center justify-between">
+      <div className=" flex items-center justify-between md:items-start">
         {/* Avatar & Greeting */}
-        <div className=" flex gap-8 border-2 border-red-600">
+        <div className=" flex gap-8 md:flex-col">
           {/* Avatar with Progress */}
           <div className=" relative">
             <Badge
@@ -44,7 +44,7 @@ const Hero = () => {
           </div>
         </div>
         {/* Search */}
-        <div className="flex h-fit gap-3 rounded-full border border-red-700 bg-gray-100 px-3 py-1">
+        <div className="flex h-fit gap-3 rounded-full bg-gray-100 px-3 py-1">
           <SearchOutlined
             className=" py-2 text-2xl text-gray-500"
             onClick={() => setShowSearch(!showSearch)}
