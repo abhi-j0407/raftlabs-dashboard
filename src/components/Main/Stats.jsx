@@ -31,7 +31,7 @@ const Stat = ({ stat }) => (
           color: "white",
         }}
       />
-      <div className=" flex gap-1">
+      <div className=" flex gap-1 text-sm">
         <p className=" text-violet-100">{stat.subtitle}</p>
         <p className=" font-bold text-white">${stat.subValue}</p>
       </div>
@@ -50,7 +50,7 @@ const Stats = () => {
 };
 
 Stat.propTypes = {
-  stat: PropTypes.object
-}
+  stat: PropTypes.object,
+};
 
 export default Stats;

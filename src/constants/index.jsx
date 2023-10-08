@@ -82,7 +82,30 @@ export const stats = [
     title: "Total Profit",
     value: "10900",
     change: "+4.3",
-    subtitle: "Previous yaer",
+    subtitle: "Previous year",
     subValue: "8.9k",
   },
 ];
+
+export const sales = {
+  august: [{
+    period: '1-10 Aug',
+    costs: 37,
+    sales: 47
+  },
+  {
+    period: '1-10 Aug',
+    costs: 37,
+    sales: 47
+    },
+    {
+      period: '1-10 Aug',
+      costs: 37,
+      sales: 47
+    },
+    {
+      period: '1-10 Aug',
+      costs: 37,
+      sales: 47
+    }]
+}

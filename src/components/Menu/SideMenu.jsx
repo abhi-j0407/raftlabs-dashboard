@@ -30,7 +30,7 @@ const SideMenu = () => {
 
   return (
     <>
-      <div className=" flex w-1/6 flex-col gap-4  border border-yellow-500 px-4 py-2 md:hidden md:px-0">
+      <nav className=" flex w-1/6 flex-col gap-4 px-4 py-2 md:hidden md:px-0 border border-gray-200">
         <div className=" flex min-h-[4rem] items-center justify-start text-center">
           <img src="/src/assets/logo.svg" alt="logo" />
           <a href="#" className="pt-1 text-3xl md:hidden">
@@ -45,7 +45,7 @@ const SideMenu = () => {
           style={{ border: "none" }}
           inlineCollapsed={collapse}
         />
-      </div>
+      </nav>
       {/* <Drawer className=" hidden md:inline-block" placement="left" closable >
       <div className=" flex min-h-[4rem] items-center justify-start text-center">
         <img src="/src/assets/logo.svg" alt="logo" />
