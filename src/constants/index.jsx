@@ -88,17 +88,8 @@ export const stats = [
 ];
 
 export const sales = {
-  august: [{
-    period: '1-10 Aug',
-    costs: 37,
-    sales: 47
-  },
-  {
-    period: '1-10 Aug',
-    costs: 37,
-    sales: 47
-    },
-    {
+  august: {
+    stats: [{
       period: '1-10 Aug',
       costs: 37,
       sales: 47
@@ -107,5 +98,17 @@ export const sales = {
       period: '1-10 Aug',
       costs: 37,
       sales: 47
-    }]
+      },
+      {
+        period: '1-10 Aug',
+        costs: 37,
+        sales: 47
+      },
+      {
+        period: '1-10 Aug',
+        costs: 37,
+        sales: 47
+      }],
+    change: 5.4
+  }
 }
