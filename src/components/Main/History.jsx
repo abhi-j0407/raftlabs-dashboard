@@ -36,6 +36,7 @@ const columns = [
     title: "Date",
     dataIndex: "date",
     key: "date",
+    responsive: ["md"],
   },
   {
     title: "Invoice",
@@ -50,6 +51,7 @@ const columns = [
   {
     title: "People",
     key: "people",
+    responsive: ["md"],
     dataIndex: "people",
     render: (_, { people }) => (
       <Avatar.Group maxCount={3} maxStyle={{
@@ -57,7 +59,7 @@ const columns = [
         backgroundColor: 'black'
       }}>
         {people.map((person) => {
-          return <Avatar key={person} src={person.iconUrl}>{person.name},</Avatar>;
+          return <Avatar key={person.name} src={person.iconUrl}>{person.name},</Avatar>;
         })}
       </Avatar.Group>
     ),
@@ -91,7 +93,7 @@ const History = () => {
         <Dropdown />
         <Dropdown />
       </div> */}
-      {/* <Table columns={columns} dataSource={transactions} /> */}
+      <Table columns={columns} dataSource={transactions} pagination={false} />
     </section>
   );
 };

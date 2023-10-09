@@ -175,7 +175,7 @@ export const transactions = [
   },
   {
     recepient: {
-      name: "Flyod Johntosan",
+      name: "L Johntosan",
       mail: "johntosan@gmail.com",
       iconUrl: "/src/assets/photo_crop.png",
     },
