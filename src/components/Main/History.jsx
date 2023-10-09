@@ -1,15 +1,7 @@
-import { Avatar, Badge, Dropdown, Space, Statistic, Table, Tag } from "antd";
+import { Avatar, Badge, Dropdown, Statistic, Table, Tag } from "antd";
 import { transactions } from "../../constants";
+import { useState } from "react";
 
-// const cols = [
-//   {
-//     title: 'Customer',
-//     dataIndex: 'customer',
-//     key: 'customer',
-//     render: (text) => <p>{ text }</p>
-//   },
-
-// ]
 const columns = [
   {
     title: "Customer",
@@ -73,11 +65,26 @@ const columns = [
 ];
 
 const History = () => {
+
+  const [month, setMonth] = useState('');
+  const [recepient, setRecepient] = useState('');
+  const [amount, setAmount] = useState(0);
+  const [status, setStatus] = useState('');
+
   return (
     <section className=" m-6 grid gap-6">
       <div className="">
         <h6 className="text-4xl font-semibold text-gray-900">Transaction History</h6>
-        {/* <Dropdown /> */}
+        {/* <Dropdown
+            menu={{
+              items,
+            }}
+            trigger={["click"]}
+          >
+            <a className=" font-medium">
+              Month
+            </a>
+          </Dropdown> */}
       </div>
       {/* <div>
         <Dropdown />

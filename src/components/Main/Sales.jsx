@@ -1,10 +1,10 @@
 import { Dropdown, Statistic } from "antd";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
-import { sales } from "../../constants";
+import { sales, totalSales } from "../../constants";
 import { useState } from "react";
-import { CaretDownOutlined } from "@ant-design/icons";
+import { CaretDownOutlined, CaretUpOutlined } from "@ant-design/icons";
 
-const foo = 14.5;
+const foo = -14.5;
 
 const Sales = () => {
   const [month, setMonth] = useState(Object.keys(sales)[0]);
@@ -24,13 +24,23 @@ const Sales = () => {
         </div>
         <div>
           <Statistic
-            value="956.82k"
+            value={totalSales.amount}
             groupSeparator="."
             prefix="$"
             suffix={
-              <p className=" ml-4 rounded-full bg-green-200 py-1 pl-1.5 pr-2 text-xs font-medium text-green-500">
-                {foo >= 0 ? "^ " : "^^ "}
-                {foo}
+              <p
+                className={`ml-4 rounded-full  py-1 pl-1.5 pr-2 text-xs font-medium  ${
+                  totalSales.change >= 0
+                    ? "bg-green-200 text-green-500"
+                    : " bg-red-200 text-red-500"
+                }`}
+              >
+                {totalSales.change >= 0 ? (
+                  <CaretUpOutlined />
+                ) : (
+                  <CaretDownOutlined />
+                )}{" "}
+                {totalSales.change}
               </p>
             }
             valueStyle={{
@@ -42,7 +52,15 @@ const Sales = () => {
             }}
           />
           <p className=" text-sm text-gray-400">
-            <span className=" text-green-500">+8.20k</span> vs prev. 60 days
+            <span
+              className={`${
+                totalSales.subChange > 0 ? "text-green-500" : "text-red-500"
+              }`}
+            >
+              {totalSales.subChange >= 0 ? '+' : '-'}
+              {totalSales.subChange}k
+            </span>{" "}
+            vs prev. 60 days
           </p>
         </div>
       </div>

@@ -87,6 +87,12 @@ export const stats = [
   },
 ];
 
+export const totalSales = {
+  amount: '956.82k',
+  change: 14.5,
+  subChange: 8.20
+}
+
 export const sales = {
   august: {
     stats: [
