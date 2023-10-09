@@ -103,9 +103,22 @@ export const sales = {
         period: '1-10 Aug',
         costs: 37,
         sales: 47
+      }],
+    change: 5.4
+  },
+  september: {
+    stats: [{
+      period: '1-10 sept',
+      costs: 37,
+      sales: 47
+    },
+    {
+      period: '1-10 sept',
+      costs: 37,
+      sales: 47
       },
       {
-        period: '1-10 Aug',
+        period: '1-10 sept',
         costs: 37,
         sales: 47
       }],
