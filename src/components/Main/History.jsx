@@ -1,23 +1,92 @@
-import { Dropdown, Table } from "antd"
+import { Avatar, Badge, Dropdown, Space, Statistic, Table, Tag } from "antd";
+import { transactions } from "../../constants";
+
+// const cols = [
+//   {
+//     title: 'Customer',
+//     dataIndex: 'customer',
+//     key: 'customer',
+//     render: (text) => <p>{ text }</p>
+//   },
+
+// ]
+const columns = [
+  {
+    title: "Customer",
+    dataIndex: "recepient",
+    key: "recepient",
+    render: (user) => (
+      <div className=" flex gap-4 w-fit">
+        <Badge count={'✦'} color="black" offset={[-5,45]} style={{
+          color: '#FFC123',
+        }}>
+          <Avatar src={user.iconUrl} size={50} />
+        </Badge>
+        <div>
+          <h6 className=" font-medium">{user.name}</h6>
+          <p className=" text-sm text-gray-500">{user.mail}</p>
+        </div>
+      </div>
+    ),
+  },
+  {
+    title: "Status",
+    dataIndex: "status",
+    key: "status",
+    render: (status) => (
+      <Tag className="flex gap-2 w-fit bg-transparent rounded-full py-1 px-2">
+        <Badge status={status === "Success" ? 'success' : status === "Fail" ? 'error' : 'warning'} />
+        {status}
+      </Tag>
+    ),
+  },
+  {
+    title: "Date",
+    dataIndex: "date",
+    key: "date",
+  },
+  {
+    title: "Invoice",
+    dataIndex: "amount",
+    key: "amount",
+    render: (amount) => (
+      <Statistic value={amount} prefix='$' valueStyle={{
+        fontSize: '1rem'
+      }} />
+    )
+  },
+  {
+    title: "People",
+    key: "people",
+    dataIndex: "people",
+    render: (_, { people }) => (
+      <Avatar.Group maxCount={3} maxStyle={{
+        color: 'white',
+        backgroundColor: 'black'
+      }}>
+        {people.map((person) => {
+          return <Avatar key={person} src={person.iconUrl}>{person.name},</Avatar>;
+        })}
+      </Avatar.Group>
+    ),
+  },
+];
 
 const History = () => {
   return (
-    <section>
-      <div>
-        <h6>Transaction History
-        </h6>
-        <Dropdown />
+    <section className=" m-6 grid gap-6">
+      <div className="">
+        <h6 className="text-4xl font-semibold text-gray-900">Transaction History</h6>
+        {/* <Dropdown /> */}
       </div>
-      <div>
+      {/* <div>
         <Dropdown />
         <Dropdown />
         <Dropdown />
-      </div>
-      <div>
-        <Table />
-      </div>
+      </div> */}
+      <Table columns={columns} dataSource={transactions} />
     </section>
-  )
-}
+  );
+};
 
-export default History
+export default History;

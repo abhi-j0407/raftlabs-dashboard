@@ -89,39 +89,118 @@ export const stats = [
 
 export const sales = {
   august: {
-    stats: [{
-      period: '1-10 Aug',
-      costs: 37,
-      sales: 47
-    },
-    {
-      period: '1-10 Aug',
-      costs: 37,
-      sales: 47
+    stats: [
+      {
+        period: "1-10 Aug",
+        costs: 37,
+        sales: 47,
       },
       {
-        period: '1-10 Aug',
+        period: "1-10 Aug",
         costs: 37,
-        sales: 47
-      }],
-    change: 5.4
+        sales: 47,
+      },
+      {
+        period: "1-10 Aug",
+        costs: 37,
+        sales: 47,
+      },
+    ],
+    change: 5.4,
   },
   september: {
-    stats: [{
-      period: '1-10 sept',
-      costs: 37,
-      sales: 47
-    },
-    {
-      period: '1-10 sept',
-      costs: 37,
-      sales: 47
+    stats: [
+      {
+        period: "1-10 sept",
+        costs: 37,
+        sales: 47,
       },
       {
-        period: '1-10 sept',
+        period: "1-10 sept",
         costs: 37,
-        sales: 47
-      }],
-    change: 5.4
-  }
-}
+        sales: 47,
+      },
+      {
+        period: "1-10 sept",
+        costs: 37,
+        sales: 47,
+      },
+    ],
+    change: 5.4,
+  },
+};
+
+export const transactions = [
+  {
+    recepient: {
+      name: "Flyod Johntosan",
+      mail: "johntosan@gmail.com",
+      iconUrl: "/src/assets/photo_crop.png",
+    },
+    status: "Success",
+    date: "2021-01-01",
+    amount: 10000,
+    people: [
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+    ],
+  },
+  {
+    recepient: {
+      name: "Flyod Johntosan",
+      mail: "johntosan@gmail.com",
+      iconUrl: "/src/assets/photo_crop.png",
+    },
+    status: "Success",
+    date: "2021-01-01",
+    amount: 10000,
+    people: [
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+      {
+        name: "Person 1",
+        iconUrl: "/src/assets/photo_crop.png",
+      },
+    ],
+  },
+];
