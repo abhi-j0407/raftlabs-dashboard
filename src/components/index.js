@@ -5,3 +5,5 @@ export { default as History } from "./Main/History";
 export { default as Stats } from "./Main/Stats";
 export { default as Sales } from "./Main/Sales";
 export { default as Sidebar } from "./Sidebar/Sidebar";
+export { default as Promo } from "./Sidebar/Promo";
+export { default as Schedule } from "./Sidebar/Schedule";

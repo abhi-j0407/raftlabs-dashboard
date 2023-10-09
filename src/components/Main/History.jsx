@@ -101,9 +101,7 @@ const History = () => {
         >
           {people.map((person) => {
             return (
-              <Avatar key={person.name} src={person.iconUrl}>
-                {person.name},
-              </Avatar>
+              <Avatar key={person.name} src={person.iconUrl} />
             );
           })}
         </Avatar.Group>

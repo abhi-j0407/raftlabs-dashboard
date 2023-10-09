@@ -144,6 +144,7 @@ export const transactions = [
       iconUrl: "/src/assets/photo_crop.png",
     },
     status: "Success",
+    key: '1',
     date: "2021-01-01",
     amount: 10000,
     people: [
@@ -182,29 +183,30 @@ export const transactions = [
     status: "Success",
     date: "2021-01-01",
     amount: 10000,
+    key: '2',
     people: [
       {
-        name: "Person 1",
+        name: "Person",
         iconUrl: "/src/assets/photo_crop.png",
       },
       {
-        name: "Person 1",
+        name: "Person",
         iconUrl: "/src/assets/photo_crop.png",
       },
       {
-        name: "Person 1",
+        name: "Person",
         iconUrl: "/src/assets/photo_crop.png",
       },
       {
-        name: "Person 1",
+        name: "Person",
         iconUrl: "/src/assets/photo_crop.png",
       },
       {
-        name: "Person 1",
+        name: "Person",
         iconUrl: "/src/assets/photo_crop.png",
       },
       {
-        name: "Person 1",
+        name: "Person",
         iconUrl: "/src/assets/photo_crop.png",
       },
     ],

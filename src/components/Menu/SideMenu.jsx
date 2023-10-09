@@ -1,7 +1,7 @@
-import Sider from "antd/es/layout/Sider";
+// import Sider from "antd/es/layout/Sider";
 import { menuItems } from "../../constants";
-import { Button, Drawer, Menu } from "antd";
-import { useState } from "react";
+import { Menu } from "antd";
+// import { useState } from "react";
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -14,7 +14,7 @@ function getItem(label, key, icon, children, type) {
 }
 
 const SideMenu = () => {
-  const [collapse, setCollapse] = useState(false);
+  // const [collapse, setCollapse] = useState(false);
 
   const items = menuItems.map((menuItem) =>
     getItem(
@@ -43,7 +43,7 @@ const SideMenu = () => {
           mode="inline"
           defaultSelectedKeys="Home"
           style={{ border: "none" }}
-          inlineCollapsed={collapse}
+          // inlineCollapsed={collapse}
         />
       </nav>
       {/* <Drawer className=" hidden md:inline-block" placement="left" closable >
