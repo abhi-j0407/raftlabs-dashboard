@@ -1,4 +1,4 @@
-import { Dropdown, Menu, Statistic } from "antd";
+import { Dropdown, Statistic } from "antd";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import { sales } from "../../constants";
 import { useState } from "react";
