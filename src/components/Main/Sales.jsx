@@ -29,7 +29,7 @@ const Sales = () => {
 
   return (
     <section className="m-6 flex flex-wrap justify-around rounded-2xl border border-gray-200 p-6 px-[2%] md:gap-x-2 md:gap-y-4 sm:gap-4">
-      <div className=" flex flex-col justify-between pb-10 md:pb-4 sm:pb-2 gap-6">
+      <div className=" flex flex-col justify-between gap-6 pb-10 md:pb-4 sm:pb-2">
         <div className="flex flex-col gap-2">
           <h5 className=" text-2xl font-medium">Total Sales & Cost</h5>
           <p className=" text-sm text-gray-400">Last 60 days</p>
@@ -76,9 +76,9 @@ const Sales = () => {
           </p>
         </div>
       </div>
-      <div className="grid gap-6" id="container">
-        <div className=" flex justify-between items-center px-8">
-          <h6 className=" text-lg font-medium">
+      <div className="grid gap-6 sm:w-full" id="container">
+        <div className=" flex items-center justify-between px-8 sm:px-0">
+          <h6 className=" text-lg font-medium sm:text-sm">
             Analytic{" "}
             <span
               className={`${
@@ -95,12 +95,12 @@ const Sales = () => {
             }}
             trigger={["click"]}
           >
-            <a className=" font-medium">
+            <a className=" font-medium sm:text-sm">
               Month <CaretDownOutlined className=" text-xs" />
             </a>
           </Dropdown>
         </div>
-        <div className=" w-[400px] aspect-video md:w-[300px] sm:w-[100%]">
+        <div className=" aspect-video w-[400px] md:w-[300px] sm:w-[100%]">
           <ResponsiveContainer height="90%" width="100%">
             <BarChart
               data={sales[month].stats}
@@ -111,8 +111,8 @@ const Sales = () => {
               }}
             >
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis dataKey="period" />
-              <YAxis tickCount={4} />
+              <XAxis dataKey="period" className=" sm:text-xs" />
+              <YAxis tickCount={4} className=" sm:text-xs" />
               <Tooltip shared={false} />
               <Bar
                 dataKey="costs"

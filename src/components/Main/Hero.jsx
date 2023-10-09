@@ -9,7 +9,7 @@ const Hero = () => {
     <section className=" p-6">
       <div className=" flex items-center justify-between md:items-start">
         {/* Avatar & Greeting */}
-        <div className=" flex gap-8 md:flex-col">
+        <div className=" flex gap-8 md:flex-col sm:gap-6">
           {/* Avatar with Progress */}
           <div className=" relative">
             <Badge
@@ -35,7 +35,7 @@ const Hero = () => {
             />
           </div>
           <div className="flex flex-col justify-center gap-2">
-            <h4 className=" text-4xl font-semibold text-gray-900">
+            <h4 className=" text-4xl font-semibold text-gray-900 sm:text-2xl">
               Good Evening Team!
             </h4>
             <p className=" text-sm text-gray-500">
