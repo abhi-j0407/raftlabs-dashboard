@@ -91,7 +91,7 @@ const History = () => {
         <Dropdown />
         <Dropdown />
       </div> */}
-      <Table columns={columns} dataSource={transactions} />
+      {/* <Table columns={columns} dataSource={transactions} /> */}
     </section>
   );
 };

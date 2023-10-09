@@ -1,10 +1,22 @@
 import { Dropdown, Statistic } from "antd";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 import { sales, totalSales } from "../../constants";
 import { useState } from "react";
 import { CaretDownOutlined, CaretUpOutlined } from "@ant-design/icons";
 
-const foo = -14.5;
+const deets = {
+  width: window.innerWidth > 1023 ? 500 : 300,
+  barSize: window.innerWidth > 1023 ? 48 : 24,
+  barGap: window.innerWidth > 1023 ? 16 : 4,
+};
 
 const Sales = () => {
   const [month, setMonth] = useState(Object.keys(sales)[0]);
@@ -17,7 +29,7 @@ const Sales = () => {
 
   return (
     <section className="m-6 flex flex-wrap justify-around rounded-2xl border border-gray-200 p-6 px-[2%] md:gap-x-2 md:gap-y-4 sm:gap-4">
-      <div className=" flex flex-col justify-between gap-6">
+      <div className=" flex flex-col justify-between pb-10 md:pb-4 sm:pb-2 gap-6">
         <div className="flex flex-col gap-2">
           <h5 className=" text-2xl font-medium">Total Sales & Cost</h5>
           <p className=" text-sm text-gray-400">Last 60 days</p>
@@ -57,7 +69,7 @@ const Sales = () => {
                 totalSales.subChange > 0 ? "text-green-500" : "text-red-500"
               }`}
             >
-              {totalSales.subChange >= 0 ? '+' : '-'}
+              {totalSales.subChange >= 0 ? "+" : "-"}
               {totalSales.subChange}k
             </span>{" "}
             vs prev. 60 days
@@ -65,7 +77,7 @@ const Sales = () => {
         </div>
       </div>
       <div className="grid gap-6" id="container">
-        <div className=" flex justify-between px-8">
+        <div className=" flex justify-between items-center px-8">
           <h6 className=" text-lg font-medium">
             Analytic{" "}
             <span
@@ -88,19 +100,36 @@ const Sales = () => {
             </a>
           </Dropdown>
         </div>
-        <BarChart
-          width={500}
-          height={150}
-          data={sales[month].stats}
-          barGap={16}
-        >
-          <CartesianGrid strokeDasharray="3 3" vertical={false} />
-          <XAxis dataKey="period" />
-          <YAxis tickCount={4} />
-          <Tooltip shared={false} />
-          <Bar dataKey="costs" fill="#D3CFFC" tooltip radius={8} barSize={48} />
-          <Bar dataKey="sales" fill="#6E62E5" radius={8} barSize={48} />
-        </BarChart>
+        <div className=" w-[400px] aspect-video md:w-[300px] sm:w-[100%]">
+          <ResponsiveContainer height="90%" width="100%">
+            <BarChart
+              data={sales[month].stats}
+              barGap={deets.barGap}
+              margin={{
+                right: 10,
+                left: -30,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" vertical={false} />
+              <XAxis dataKey="period" />
+              <YAxis tickCount={4} />
+              <Tooltip shared={false} />
+              <Bar
+                dataKey="costs"
+                fill="#D3CFFC"
+                tooltip
+                radius={8}
+                barSize={deets.barSize}
+              />
+              <Bar
+                dataKey="sales"
+                fill="#6E62E5"
+                radius={8}
+                barSize={deets.barSize}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </section>
   );
