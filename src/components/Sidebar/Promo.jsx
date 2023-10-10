@@ -5,6 +5,7 @@ import {
 } from "@ant-design/icons";
 import { Avatar, Badge, Button, Dropdown } from "antd";
 
+// Sample users & Profile options
 const extras = [
   {
     name: "Person 1",
@@ -39,10 +40,11 @@ const options = ["Profile", "Logout"].map((option) => ({
 
 const Promo = () => {
   return (
-    <div className=" flex flex-col gap-6 p-6">
+    <section className=" flex flex-col gap-6 p-6">
+      {/* Notifications & Profile */}
       <div className="mt-7 flex items-center justify-between md:mt-0 md:hidden">
         <Badge dot offset={[-7, 7]} color="#6E62E5">
-          <BellOutlined className=" text-3xl" style={{color: '#989FA8'}}/>
+          <BellOutlined className=" text-3xl" style={{ color: "#989FA8" }} />
         </Badge>
         <Dropdown
           menu={{
@@ -87,11 +89,11 @@ const Promo = () => {
       </div>
       <Button
         icon={<ArrowRightOutlined />}
-        className=" flex flex-row-reverse items-center justify-between border border-gray-200 py-5 pl-3 pr-1 text-accentPurple shadow-none md:w-fit md:gap-6"
+        className=" text-accentPurple flex flex-row-reverse items-center justify-between border border-gray-200 py-5 pl-3 pr-1 shadow-none md:w-fit md:gap-6"
       >
         Upgrade Now
       </Button>
-    </div>
+    </section>
   );
 };
 

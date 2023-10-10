@@ -1,4 +1,4 @@
-import { Hero, History, Sales, Stats } from "../"
+import { Hero, History, Sales, Stats } from "../";
 
 const Main = () => {
   return (
@@ -8,7 +8,7 @@ const Main = () => {
       <Sales />
       <History />
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

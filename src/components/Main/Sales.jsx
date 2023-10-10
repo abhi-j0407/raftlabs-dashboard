@@ -12,15 +12,17 @@ import { sales, totalSales } from "../../constants";
 import { useState } from "react";
 import { CaretDownOutlined, CaretUpOutlined } from "@ant-design/icons";
 
-const deets = {
+// Responsive sizes for custom table styles
+const resSizes = {
   width: window.innerWidth > 1023 ? 500 : 300,
   barSize: window.innerWidth > 1023 ? 48 : 24,
   barGap: window.innerWidth > 1023 ? 16 : 4,
 };
 
 const Sales = () => {
-  const [month, setMonth] = useState(Object.keys(sales)[0]);
+  const [month, setMonth] = useState(Object.keys(sales)[0]); //Use top entry (latest) as default month
 
+  // Extract dropdown items from data
   const items = Object.keys(sales).map((item) => ({
     label: <p className=" capitalize">{item}</p>,
     key: item,
@@ -29,6 +31,7 @@ const Sales = () => {
 
   return (
     <section className="m-6 flex flex-wrap justify-around rounded-2xl border border-gray-200 p-6 px-[2%] md:gap-x-2 md:gap-y-4 sm:gap-4">
+      {/* Stats */}
       <div className=" flex flex-col justify-between gap-6 pb-10 md:pb-4 sm:pb-2">
         <div className="flex flex-col gap-2">
           <h5 className=" text-2xl font-medium">Total Sales & Cost</h5>
@@ -76,6 +79,7 @@ const Sales = () => {
           </p>
         </div>
       </div>
+      {/* Graph */}
       <div className="grid gap-6 sm:w-full" id="container">
         <div className=" flex items-center justify-between px-8 sm:px-0">
           <h6 className=" text-lg font-medium sm:text-sm">
@@ -104,7 +108,7 @@ const Sales = () => {
           <ResponsiveContainer height="90%" width="100%">
             <BarChart
               data={sales[month].stats}
-              barGap={deets.barGap}
+              barGap={resSizes.barGap}
               margin={{
                 right: 10,
                 left: -30,
@@ -119,13 +123,13 @@ const Sales = () => {
                 fill="#D3CFFC"
                 tooltip
                 radius={8}
-                barSize={deets.barSize}
+                barSize={resSizes.barSize}
               />
               <Bar
                 dataKey="sales"
                 fill="#6E62E5"
                 radius={8}
-                barSize={deets.barSize}
+                barSize={resSizes.barSize}
               />
             </BarChart>
           </ResponsiveContainer>

@@ -2,6 +2,7 @@ import { Statistic } from "antd";
 import { stats } from "../../constants";
 import { PropTypes } from "prop-types";
 
+// Indiviual stat component
 const Stat = ({ stat }) => (
   <div className=" flex gap-4 sm:m-auto">
     <img

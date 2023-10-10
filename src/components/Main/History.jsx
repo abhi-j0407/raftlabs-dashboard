@@ -13,10 +13,12 @@ import { useEffect, useState } from "react";
 import { DownOutlined } from "@ant-design/icons";
 
 const History = () => {
+  // States for storing filter values
   const [month, setMonth] = useState("");
   const [recepient, setRecepient] = useState("");
   const [status, setStatus] = useState("");
 
+  // Columns' structures & features
   const columns = [
     {
       title: "Customer",
@@ -25,16 +27,16 @@ const History = () => {
       render: (user) => (
         <div className=" flex w-fit gap-4">
           <div className=" sm:hidden">
-          <Badge
-            count={"✦"}
-            color="black"
-            offset={[-5, 45]}
-            style={{
-              color: "#FFC123"
-            }}
-          >
-            <Avatar src={user.iconUrl} size={50} />
-          </Badge>
+            <Badge
+              count={"✦"}
+              color="black"
+              offset={[-5, 45]}
+              style={{
+                color: "#FFC123",
+              }}
+            >
+              <Avatar src={user.iconUrl} size={50} />
+            </Badge>
           </div>
           <div>
             <h6 className=" font-medium sm:text-sm">{user.name}</h6>
@@ -47,7 +49,7 @@ const History = () => {
       title: "Status",
       dataIndex: "status",
       key: "status",
-      responsive: ['sm'],
+      responsive: ["sm"],
       render: (status) => (
         <Tag
           className="flex w-fit cursor-pointer gap-2 rounded-full bg-transparent px-2 py-1 hover:bg-gray-200"
@@ -100,15 +102,14 @@ const History = () => {
           }}
         >
           {people.map((person) => {
-            return (
-              <Avatar key={person.name} src={person.iconUrl} />
-            );
+            return <Avatar key={person.name} src={person.iconUrl} />;
           })}
         </Avatar.Group>
       ),
     },
   ];
 
+  // Logging filter changes
   useEffect(() => {
     console.log("Selected month: ", month);
     console.log("Selected recepient: ", recepient);
@@ -137,8 +138,13 @@ const History = () => {
         <h6 className="text-4xl font-semibold text-gray-900 sm:text-2xl">
           Transaction History
         </h6>
-        <DatePicker onChange={handleChange} picker="month" className="w-fit h-fit my-auto" />
+        <DatePicker
+          onChange={handleChange}
+          picker="month"
+          className="my-auto h-fit w-fit"
+        />
       </div>
+      {/* Filters */}
       <div className="flex gap-4 sm:justify-between sm:gap-0">
         <Dropdown
           menu={{
@@ -176,6 +182,7 @@ const History = () => {
           </a>
         </Dropdown>
       </div>
+      {/* Table */}
       <ConfigProvider
         theme={{
           components: {
@@ -189,7 +196,12 @@ const History = () => {
         }}
       >
         <div className=" max-w-full">
-        <Table columns={columns} dataSource={transactions} pagination={false} style={{width: '100%'}} />
+          <Table
+            columns={columns}
+            dataSource={transactions}
+            pagination={false}
+            style={{ width: "100%" }}
+          />
         </div>
       </ConfigProvider>
     </section>
