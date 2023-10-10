@@ -141,7 +141,7 @@ export const transactions = [
     recepient: {
       name: "Flyod Johntosan",
       mail: "johntosan@gmail.com",
-      iconUrl: "/src/assets/photo_crop.png",
+      iconUrl: "/assets/photo_crop.png",
     },
     status: "Success",
     key: "1",
@@ -150,27 +150,27 @@ export const transactions = [
     people: [
       {
         name: "Person 1",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person 1",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person 1",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person 1",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person 1",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person 1",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
     ],
   },
@@ -178,7 +178,7 @@ export const transactions = [
     recepient: {
       name: "L Johntosan",
       mail: "johntosan@gmail.com",
-      iconUrl: "/src/assets/photo_crop.png",
+      iconUrl: "/assets/photo_crop.png",
     },
     status: "Success",
     date: "2021-01-01",
@@ -187,27 +187,27 @@ export const transactions = [
     people: [
       {
         name: "Person",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
       {
         name: "Person",
-        iconUrl: "/src/assets/photo_crop.png",
+        iconUrl: "/assets/photo_crop.png",
       },
     ],
   },
@@ -219,21 +219,21 @@ export const schedules = {
       time: "12pm",
       platform: "Google Meet",
       title: "Meeting with Client",
-      icon: "/src/assets/laptop-svgrepo-com.svg",
+      icon: "/assets/laptop-svgrepo-com.svg",
       id: 1
     },
     {
       time: "03pm",
       platform: "Google Meet",
       title: "Weekly Report",
-      icon: "/src/assets/books-svgrepo-com.svg",
+      icon: "/assets/books-svgrepo-com.svg",
       id: 2
     },
     {
       time: "05pm",
       platform: "Google Meet",
       title: "Daily Scrum Meeting",
-      icon: "/src/assets/notebook-with-decorative-cover-svgrepo-com.svg",
+      icon: "/assets/notebook-with-decorative-cover-svgrepo-com.svg",
       id: 3
     },
   ],

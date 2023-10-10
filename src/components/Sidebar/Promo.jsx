@@ -9,27 +9,27 @@ import { Avatar, Badge, Button, Dropdown } from "antd";
 const extras = [
   {
     name: "Person 1",
-    iconUrl: "/src/assets/photo_crop.png",
+    iconUrl: "/assets/photo_crop.png",
   },
   {
     name: "Person 2",
-    iconUrl: "/src/assets/photo_crop.png",
+    iconUrl: "/assets/photo_crop.png",
   },
   {
     name: "Person 3",
-    iconUrl: "/src/assets/photo_crop.png",
+    iconUrl: "/assets/photo_crop.png",
   },
   {
     name: "Person 4",
-    iconUrl: "/src/assets/photo_crop.png",
+    iconUrl: "/assets/photo_crop.png",
   },
   {
     name: "Person 5",
-    iconUrl: "/src/assets/photo_crop.png",
+    iconUrl: "/assets/photo_crop.png",
   },
   {
     name: "Person 6",
-    iconUrl: "/src/assets/photo_crop.png",
+    iconUrl: "/assets/photo_crop.png",
   },
 ];
 
@@ -53,7 +53,7 @@ const Promo = () => {
           trigger={["click"]}
         >
           <a className="flex w-fit items-center gap-2 rounded-full border border-gray-50 bg-transparent p-1 pr-2 text-sm font-medium shadow-md sm:text-xs">
-            <Avatar src="/src/assets/photo_crop.png" size={"small"} />
+            <Avatar src="/assets/photo_crop.png" size={"small"} />
             Jhontosan
             <DownOutlined className="text-[0.6rem] text-gray-500" />
           </a>

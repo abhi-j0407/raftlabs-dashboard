@@ -1,7 +1,6 @@
 import { SearchOutlined, UserOutlined } from "@ant-design/icons";
 import { Avatar, Badge, Progress } from "antd";
 import { useState } from "react";
-import photo from '../../assets/photo_crop.png'
 
 const Hero = () => {
   const [showSearch, setShowSearch] = useState(false); //State to control search field expansion
@@ -19,7 +18,7 @@ const Hero = () => {
               color="#6E62E5"
             >
               <Avatar
-                src={photo}
+                src='/assets/photo_crop.png'
                 icon={<UserOutlined />}
                 className=" left-1 top-1 w-full"
                 size={93}
