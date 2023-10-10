@@ -18,4 +18,4 @@
 
 # Deployment
 
-The application has been deployed on [Vercel](https://dataweaver-booker-f73f2vbsn-abhi-j0407.vercel.app/).
+The application has been deployed on [Vercel](https://raftlabs-dashboard.vercel.app/).
