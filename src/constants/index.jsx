@@ -62,7 +62,7 @@ export const menuItems = [
 
 export const stats = [
   {
-    icon: "/src/assets/icons8-money-bag-with-coins-100.png",
+    icon: "/assets/icons8-money-bag-with-coins-100.png",
     title: "Monthly Revenue",
     value: "3500",
     change: "+2.4",
@@ -70,7 +70,7 @@ export const stats = [
     subValue: "1.7k",
   },
   {
-    icon: "/src/assets/icons8-cash-in-hand-100.png",
+    icon: "/assets/icons8-cash-in-hand-100.png",
     title: "Monthly Sales",
     value: "6750",
     change: "+1.4",
@@ -78,7 +78,7 @@ export const stats = [
     subValue: "3.1k",
   },
   {
-    icon: "/src/assets/icons8-piggy-bank-100.png",
+    icon: "/assets/icons8-piggy-bank-100.png",
     title: "Total Profit",
     value: "10900",
     change: "+4.3",
