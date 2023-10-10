@@ -117,7 +117,15 @@ const Sales = () => {
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
               <XAxis dataKey="period" className=" sm:text-xs" />
               <YAxis tickCount={4} className=" sm:text-xs" />
-              <Tooltip shared={false} />
+              <Tooltip
+                shared={false}
+                contentStyle={{
+                  backgroundColor: "black",
+                  padding: "0.25rem 0.5rem",
+                  border: "none",
+                }}
+                itemStyle={{ color: "white" }}
+              />
               <Bar
                 dataKey="costs"
                 fill="#D3CFFC"
