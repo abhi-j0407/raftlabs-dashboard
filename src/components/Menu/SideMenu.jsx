@@ -3,6 +3,7 @@ import { useState } from "react";
 import { menuItems } from "../../constants";
 import { Button, ConfigProvider, Drawer, Menu } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
+import logo from '../../assets/logo.svg'
 
 function getItem(label, key, icon, children, type) {
   return {
@@ -45,7 +46,7 @@ const SideMenu = () => {
       {/* Desktop nav */}
       <nav className=" flex flex-col gap-4 border-r border-gray-200 px-4 py-2 md:hidden md:px-0">
         <div className=" flex min-h-[4rem] items-center justify-start text-center">
-          <img src="./assets/logo.png" alt="logo" />
+          <img src={logo} alt="logo" />
           <a href="#" className="pt-1 text-3xl md:hidden">
             Omoi
           </a>
