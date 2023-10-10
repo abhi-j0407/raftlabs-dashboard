@@ -75,7 +75,7 @@ const SideMenu = () => {
       <Drawer
         title={
           <div className=" flex min-h-[4rem] items-center justify-start text-center">
-            <img src="/src/assets/logo.svg" alt="logo" />
+            <img src="/assets/logo.svg" alt="logo" />
             <a href="#" className="pt-1 text-3xl">
               Omoi
             </a>
