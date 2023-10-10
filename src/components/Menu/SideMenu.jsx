@@ -43,9 +43,9 @@ const SideMenu = () => {
       }}
     >
       {/* Desktop nav */}
-      <nav className=" flex w-1/6 flex-col gap-4 border border-gray-200 px-4 py-2 md:hidden md:px-0">
+      <nav className=" flex flex-col gap-4 border-r border-gray-200 px-4 py-2 md:hidden md:px-0">
         <div className=" flex min-h-[4rem] items-center justify-start text-center">
-          <img src="/src/assets/logo.svg" alt="logo" />
+          <img src="./assets/logo.png" alt="logo" />
           <a href="#" className="pt-1 text-3xl md:hidden">
             Omoi
           </a>
@@ -53,13 +53,12 @@ const SideMenu = () => {
 
         <Menu
           items={items}
-          className=""
           mode="inline"
           defaultSelectedKeys="Home"
-          style={{ border: "none" }}
+          style={{ border: "none", minWidth: '200px' }}
         />
       </nav>
-      
+
       {/* Mobile nav */}
       <Button
         type="primary"

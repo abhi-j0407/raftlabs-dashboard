@@ -18,7 +18,7 @@ const Hero = () => {
               color="#6E62E5"
             >
               <Avatar
-                src="/src/assets/photo_crop.png"
+                src="src/assets/photo_crop.png"
                 icon={<UserOutlined />}
                 className=" left-1 top-1 w-full"
                 size={93}
