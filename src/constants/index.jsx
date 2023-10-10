@@ -88,10 +88,10 @@ export const stats = [
 ];
 
 export const totalSales = {
-  amount: '956.82k',
+  amount: "956.82k",
   change: 14.5,
-  subChange: 8.20
-}
+  subChange: 8.2,
+};
 
 export const sales = {
   august: {
@@ -144,7 +144,7 @@ export const transactions = [
       iconUrl: "/src/assets/photo_crop.png",
     },
     status: "Success",
-    key: '1',
+    key: "1",
     date: "2021-01-01",
     amount: 10000,
     people: [
@@ -183,7 +183,7 @@ export const transactions = [
     status: "Success",
     date: "2021-01-01",
     amount: 10000,
-    key: '2',
+    key: "2",
     people: [
       {
         name: "Person",
@@ -212,3 +212,29 @@ export const transactions = [
     ],
   },
 ];
+
+export const schedules = {
+  "2023-10-10": [
+    {
+      time: "12pm",
+      platform: "Google Meet",
+      title: "Meeting with Client",
+      icon: "/src/assets/laptop-svgrepo-com.svg",
+      id: 1
+    },
+    {
+      time: "03pm",
+      platform: "Google Meet",
+      title: "Weekly Report",
+      icon: "/src/assets/books-svgrepo-com.svg",
+      id: 2
+    },
+    {
+      time: "05pm",
+      platform: "Google Meet",
+      title: "Daily Scrum Meeting",
+      icon: "/src/assets/notebook-with-decorative-cover-svgrepo-com.svg",
+      id: 3
+    },
+  ],
+};

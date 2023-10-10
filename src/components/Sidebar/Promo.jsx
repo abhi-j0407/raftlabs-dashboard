@@ -39,7 +39,7 @@ const options = ["Profile", "Logout"].map((option) => ({
 
 const Promo = () => {
   return (
-    <aside className=" flex flex-col gap-6 p-6">
+    <div className=" flex flex-col gap-6 p-6">
       <div className="mt-7 flex items-center justify-between md:mt-0 md:hidden">
         <Badge dot offset={[-7, 7]}>
           <BellOutlined className=" text-3xl" />
@@ -91,7 +91,7 @@ const Promo = () => {
       >
         Upgrade Now
       </Button>
-    </aside>
+    </div>
   );
 };
 
