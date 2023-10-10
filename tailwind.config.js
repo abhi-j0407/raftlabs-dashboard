@@ -7,7 +7,14 @@ export default {
       md: { max: "1023px" },
       sm: { max: "424px" },
     },
-    extend: {},
+    extend: {
+      colors: {
+        accentPurple: '#6E62E5',
+        accentLightPurple: '#D3CFFC',
+        accentBlack: '#1E2125',
+        accentGray: '#F3F4F8'
+      }
+     },
   },
   plugins: [],
 };

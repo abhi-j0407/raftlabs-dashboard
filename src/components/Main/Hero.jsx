@@ -16,7 +16,7 @@ const Hero = () => {
               count={1}
               offset={[-10, 11]}
               className=" relative z-10"
-              color="violet"
+              color="#6E62E5"
             >
               <Avatar
                 src="/src/assets/photo_crop.png"
@@ -31,7 +31,7 @@ const Hero = () => {
               className=" absolute left-0 top-0"
               strokeWidth={3}
               size={101}
-              strokeColor="violet"
+              strokeColor="#6E62E5"
             />
           </div>
           <div className="flex flex-col justify-center gap-2">

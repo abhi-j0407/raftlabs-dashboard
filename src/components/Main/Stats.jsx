@@ -41,7 +41,7 @@ const Stat = ({ stat }) => (
 
 const Stats = () => {
   return (
-    <section className=" m-6 flex flex-wrap justify-around rounded-2xl bg-violet-400 p-6 px-[2%] md:gap-x-2 md:gap-y-4 sm:gap-4 sm:justify-between">
+    <section className=" m-6 flex flex-wrap justify-around rounded-2xl bg-accentPurple p-6 px-[2%] md:gap-x-2 md:gap-y-4 sm:gap-4 sm:justify-between">
       {stats.map((stat) => (
         <Stat stat={stat} key={stat.title} />
       ))}

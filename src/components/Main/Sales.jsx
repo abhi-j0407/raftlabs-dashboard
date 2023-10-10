@@ -58,7 +58,7 @@ const Sales = () => {
             valueStyle={{
               display: "flex",
               alignItems: "center",
-              color: "rgb(167 139 250)",
+              color: "#6E62E5",
               fontWeight: "bold",
               fontSize: "2.5rem",
             }}

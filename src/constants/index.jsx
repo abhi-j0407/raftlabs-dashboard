@@ -12,7 +12,7 @@ import {
 export const menuItems = [
   {
     title: "Home",
-    icon: <HomeOutlined />,
+    icon: <HomeOutlined style={{color: 'white'}} />,
   },
   {
     title: "Analytic",

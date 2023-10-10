@@ -41,8 +41,8 @@ const Promo = () => {
   return (
     <div className=" flex flex-col gap-6 p-6">
       <div className="mt-7 flex items-center justify-between md:mt-0 md:hidden">
-        <Badge dot offset={[-7, 7]}>
-          <BellOutlined className=" text-3xl" />
+        <Badge dot offset={[-7, 7]} color="#6E62E5">
+          <BellOutlined className=" text-3xl" style={{color: '#989FA8'}}/>
         </Badge>
         <Dropdown
           menu={{
@@ -58,7 +58,7 @@ const Promo = () => {
         </Dropdown>
       </div>
       <div className="grid gap-2 sm:gap-1">
-        <p className=" text-sm text-[#756AE6] sm:text-xs">Premium Access</p>
+        <p className=" text-sm text-[#6E62E5] sm:text-xs">Premium Access</p>
         <h6 className=" flex gap-4 text-[1.4rem] font-bold sm:flex-col sm:gap-0">
           Take Back Your Creative Control{" "}
           <Avatar.Group
@@ -87,7 +87,7 @@ const Promo = () => {
       </div>
       <Button
         icon={<ArrowRightOutlined />}
-        className=" flex flex-row-reverse items-center justify-between border border-gray-200 py-5 pl-3 pr-1 text-[#756AE6] shadow-none md:w-fit md:gap-6"
+        className=" flex flex-row-reverse items-center justify-between border border-gray-200 py-5 pl-3 pr-1 text-accentPurple shadow-none md:w-fit md:gap-6"
       >
         Upgrade Now
       </Button>

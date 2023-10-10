@@ -1,6 +1,6 @@
 // import Sider from "antd/es/layout/Sider";
 import { menuItems } from "../../constants";
-import { Menu } from "antd";
+import { ConfigProvider, Menu } from "antd";
 // import { useState } from "react";
 
 function getItem(label, key, icon, children, type) {
@@ -37,6 +37,14 @@ const SideMenu = () => {
             Omoi
           </a>
         </div>
+        <ConfigProvider theme={{
+    components: {
+      Menu: {
+        /* here is your component tokens */
+        // itemActiveBg: '#6E62E5'
+      },
+    },
+  }}>
         <Menu
           items={items}
           className=""
@@ -45,6 +53,7 @@ const SideMenu = () => {
           style={{ border: "none" }}
           // inlineCollapsed={collapse}
         />
+        </ConfigProvider>
       </nav>
       {/* <Drawer className=" hidden md:inline-block" placement="left" closable >
       <div className=" flex min-h-[4rem] items-center justify-start text-center">
