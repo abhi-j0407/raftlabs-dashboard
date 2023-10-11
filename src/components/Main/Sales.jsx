@@ -14,9 +14,9 @@ import { CaretDownOutlined, CaretUpOutlined } from "@ant-design/icons";
 
 // Responsive sizes for custom table styles
 const resSizes = {
-  width: window.innerWidth > 1023 ? 500 : 300,
-  barSize: window.innerWidth > 1023 ? 48 : 24,
-  barGap: window.innerWidth > 1023 ? 16 : 4,
+  width: window.innerWidth > 1025 ? 500 : 300,
+  barSize: window.innerWidth > 1025 ? 48 : 24,
+  barGap: window.innerWidth > 1025 ? 16 : 4,
 };
 
 const Sales = () => {

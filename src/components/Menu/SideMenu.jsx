@@ -43,7 +43,7 @@ const SideMenu = () => {
       }}
     >
       {/* Desktop nav */}
-      <nav className=" flex flex-col gap-4 border-r border-gray-200 px-4 py-2 md:hidden md:px-0">
+      <nav className=" flex flex-col gap-4 border-r border-gray-200 px-4 py-2 md:hidden md:px-0 min-w-fit w-1/6">
         <div className=" flex min-h-[4rem] items-center justify-start text-center">
           <img src='/assets/logo.svg' alt="logo" />
           <a href="#" className="pt-1 text-3xl md:hidden">
@@ -55,7 +55,8 @@ const SideMenu = () => {
           items={items}
           mode="inline"
           defaultSelectedKeys="Home"
-          style={{ border: "none", minWidth: '200px' }}
+          style={{ border: "none" }}
+          className=""
         />
       </nav>
 

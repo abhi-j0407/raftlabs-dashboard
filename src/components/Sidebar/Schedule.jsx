@@ -3,12 +3,8 @@ import { schedules } from "../../constants";
 import { useState } from "react";
 import { ClockCircleOutlined, VideoCameraOutlined } from "@ant-design/icons";
 
-// Get today's date in preferred format
-let today = new Date();
-today =today.getFullYear() + "-" + String(today.getMonth() + 1).padStart(2, "0") + "-" + String(today.getDate()).padStart(2, "0");
-
 const Schedule = () => {
-  const [selectedDate, setSelectedDate] = useState(today);
+  const [selectedDate, setSelectedDate] = useState(Object.keys(schedules)[0]);
 
   // Update choice and display schedule for that day
   const onPanelChange = (value) => {
@@ -16,9 +12,9 @@ const Schedule = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 p-5">
+    <div className="flex flex-col gap-6 p-2">
       <Calendar fullscreen={false} onChange={onPanelChange} mode="month" />
-      <div>
+      <div className=" px-2">
         {schedules[selectedDate.toString()]?.map((appointment) => (
           <div
             key={appointment.id}
