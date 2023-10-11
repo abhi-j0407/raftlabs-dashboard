@@ -19,3 +19,7 @@
 # Deployment
 
 The application has been deployed on [Vercel](https://raftlabs-dashboard.vercel.app/).
+
+# Walkthrough
+
+The application and code walkthrough video has been uploaded on [Loom](https://www.loom.com/share/53c4e9ca77c14fa0b0f306119fd583e0?sid=07dde433-ee3f-42b4-a534-4390b71834f2).
